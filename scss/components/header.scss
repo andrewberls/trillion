@@ -1,0 +1,41 @@
+$header-height: 40px;
+
+header {
+  @include clearfix;
+  background-color: #4C4545;
+  height: $header-height;
+
+  ul { float: left; }
+
+  li, a { display: inline-block; }
+
+  li {
+    line-height: $header-height;
+    margin-right: 10px;
+    position: relative;
+
+    a {
+      font-size: 11px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0 8px;
+
+      &:hover {
+        background-color: $aqua;
+        text-decoration: none;
+      }
+
+      &.current { text-decoration: underline; }
+    }
+  }
+
+  @include mobile {
+    height: auto;
+    text-align: center;
+
+    ul { float: none; }
+  }
+
+}

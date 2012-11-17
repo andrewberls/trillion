@@ -4,8 +4,10 @@
 
 @import "components/typography";
 @import "components/buttons";
+@import "components/header";
 @import "components/forms";
 @import "components/tables";
+@import "components/nicebox";
 
 
 
@@ -18,87 +20,24 @@ body {
   font-size: 13px;
 }
 
-.whitebox {
+.left  { float: left; }
+.right { float: right; }
+
+%box {
   @include border-box;
-  @include border-radius;
+  @include border-radius(2px);
   @include clearfix;
-  background-color: white;
-  border: 1px solid $med-gray;
   padding: 15px;
 }
 
-
-
-//-- BLOCKQUOTES
-//------------------------------------
-blockquote {
-  @include border-box;
-  border-left: 6px solid lighten($blue, 10);
-  font-size: 1.1em;
-  line-height: 1.4;
-  padding-left: 20px;
-
-  p {
-    margin-bottom: 15px;
-
-    &:first-of-type:before,
-    &:last-of-type:after {
-      content: '"';
-    }
-  }
-
-  .source {
-    font-size: 0.9em;
-    font-weight: bold;
-
-    &:before {
-      content: "- ";
-    }
-  }
-}
-
-
-//-- CODE
-//------------------------------------
-code, pre {
-  @include border-radius;
-  background-color: $light-gray;
+.whitebox {
+  @extend %box;
+  background-color: white;
   border: 1px solid $med-gray;
-  font-family: $codeFontFamily;
 }
 
-code {
-  padding: 2px 4px;
-}
-
-pre {
-  @include border-box;
-  margin: 15px 0;
-  padding: 5px 0;
-}
-
-
-//-- NICEBOX
-//------------------------------------
-.nicebox {
-  @include border-radius;
-
-  .nicebox-head,
-  .nicebox-body {
-    @include clearfix;
-    background-color: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
-    box-shadow: 0 1px 6px #BBB;
-    color: $light-text;
-    padding: 30px 0;
-  }
-
-  .nicebox-head {
-    text-align: center;
-  }
-
-  .nicebox-body {
-    background-color: $light-gray;
-    padding: 30px;
-  }
+.greybox {
+  @extend %box;
+  background-color: $light-gray;
+  border: 1px solid lighten($med-gray, 10);
 }

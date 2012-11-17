@@ -13,7 +13,7 @@
 
 <body>
 
-  <header class="noise">
+  <!-- <div class="noise logo-header">
     <div class="container">
       <div class="row">
         <div class="span-16">
@@ -21,7 +21,18 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <header>
+    <div class="container">
+      <ul>
+        <li><a href="#" class="current">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+      </ul>
+    </div>
   </header>
+
 
   <section class="demo-gray">
     <div class="container">
@@ -55,7 +66,7 @@
           <!--
             TABLE EXAMPLE
           -->
-          <table>
+          <table class="table-striped">
             <thead>
               <tr>
                 <th>header cell 1</th>
@@ -109,10 +120,10 @@
 
           <p>Use the <code>&lt;code&gt;</code> tag to wrap inline blocks of code. Use <code>&lt;pre&gt;</code> tags for a code block as follows:</p>
 
-  <pre>
-  var test = function(name) {
-    console.log("Hello" + name + "!");
-  }</pre>
+<pre>
+ var sayHello = function(name) {
+   console.log("Hello " + name + "!");
+ }</pre>
 
         </div>
       </div>
@@ -142,18 +153,19 @@
 
           <div class="nicebox">
             <div class="nicebox-head">
-              <h3>Ooh, a .nicebox</h3>
+              <h3>Ooh, a nicebox</h3>
+              <p>This bit is in a <code>.nicebox-head</code></p>
             </div>
             <div class="nicebox-body">
 
+              <p class="center-text" style="margin-bottom: 20px">Down here is the <code>.nicebox-body</code></p>
               <form>
-                <label>God damn this form is nice</label>
-                <input type="text" placeholder="Type anything. I don't even care.">
+                <input type="text" placeholder="Type anything. It really doesn't matter.">
 
                 <div style="text-align: center; margin-top: 20px;">
-                  <a class="btn btn-green btn-huge">
+                  <a class="btn btn-green btn-large">
                     <i class="icon-white icon-ok"></i>
-                    Damn right it is
+                    Big affirmative button!
                   </a>
                 </div>
 
@@ -167,18 +179,31 @@
 
 
       <div class="row">
-        <div class="span-16 text-demo">
+        <div class="span-10 offset-3" style="margin-bottom: 20px">
 
-          <h1>This demo page doesn't make much sense.</h1>
-          <h2>Right now its just a big mashup.</h2>
-          <h3>I'll fix it eventually, but</h3>
-          <h4>here's a bunch of headings</h4>
-          <h5>Getting smaller and</h5>
-          <h6>smaller. Who the hell uses h6 anyways?</h6>
+          <div style="text-align: center">
+            <a href="#" class="btn btn-medium btn-secondary">.btn-secondary</a>
+            <a href="#" class="btn btn-medium btn-red">.btn-red</a>
+            <a href="#" class="btn btn-medium btn-green">.btn-green</a>
+            <a href="#" class="btn btn-medium btn-blue">.btn-blue</a>
+            <a href="#" class="btn btn-medium btn-aqua">.btn-aqua</a>
+          </div>
 
-          <a href="#" class="btn btn-red btn-huge" style="margin-top: 15px;">
-            <i class='icon-white icon-trash'></i> Throw it all away
-          </a>
+          <div style="text-align: center; margin-top: 40px">
+            <a href="#" class="btn btn-green btn-large">.btn-large</a>
+            <a href="#" class="btn btn-aqua btn-large btn-round">.btn-round</a>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px">
+            <a href="#" class="btn btn-blue btn-small">.btn-small</a>
+            <a href="#" class="btn btn-blue btn-medium">.btn-medium</a>
+            <a href="#" class="btn btn-blue btn-large">.btn-large</a>
+          </div>
+
+        </div>
+
+        <div class="span-6 offset-5 greybox" style="margin-top: 20px">
+          <a href="#" class="btn btn-blue btn-full">.btn-full</a>
         </div>
 
       </div>
@@ -186,7 +211,6 @@
 
     </div><!-- .container -->
   </section><!-- .demo-white -->
-
 
 
 
@@ -199,12 +223,6 @@
       </div>
     </div><!-- .container -->
   </section><!-- .demo-dark -->
-
-
-
-
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <!-- <script type="text/javascript" src="js/trillion.js"></script> -->
 
 </body>
 </html>

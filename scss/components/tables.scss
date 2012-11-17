@@ -24,8 +24,7 @@ table {
     border-top: 0;
   }
 
-  tr:nth-of-type(even) td {
-    // TODO: this probably shouldn't be a default option
+  &.table-striped tr:nth-of-type(even) td {
     background-color: $light-gray;
   }
 

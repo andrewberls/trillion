@@ -4,7 +4,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -20,8 +20,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.2em;
-  font-weight: bold;
+  @include bold(1.2em);
 }
 
 h6 {
@@ -30,4 +29,52 @@ h6 {
 
 strong {
   font-weight: bold;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
+//-- BLOCKQUOTES
+//------------------------------------
+blockquote {
+  @include border-box;
+  border-left: 6px solid $aqua;
+  font-size: 1.1em;
+  line-height: 1.4;
+  padding-left: 20px;
+
+  p {
+    margin-bottom: 15px;
+
+    &:first-of-type:before,
+    &:last-of-type:after {
+      content: '"';
+    }
+  }
+
+  .source {
+    @include bold(0.9em);
+
+    &:before { content: "- "; }
+  }
+}
+
+
+//-- CODE
+//------------------------------------
+code, pre {
+  @include border-radius;
+  background-color: $light-gray;
+  border: 1px solid $med-gray;
+  font-family: $codeFontFamily;
+}
+
+code { padding: 2px 4px; }
+
+pre {
+  @include border-box;
+  margin: 15px 0;
+  padding: 5px 0;
 }
